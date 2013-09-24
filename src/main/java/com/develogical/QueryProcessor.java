@@ -9,9 +9,12 @@ public class QueryProcessor {
 
     public String process(String query) {
 
+
     	if (query.contains("which of the following numbers")) {
+	    	String subquery =  query.substring(query.indexOf(':'));
+
 	    	Pattern p = Pattern.compile("-?\\d+");
-	    	Matcher m = p.matcher(query);
+	    	Matcher m = p.matcher(subquery);
 
 	    	int largest = -39743;
 

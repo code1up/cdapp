@@ -22,6 +22,6 @@ public class QueryProcessorTest {
 
     @Test
     public void returnsLargestNumberInQuery() throws Exception {
-        assertThat(queryProcessor.process("-- which of the following numbers -- 875,93,27,223"), is("875"));
+        assertThat(queryProcessor.process("a963738dskjhdkjd: -- which of the following numbers -- 875  sds ,93  ds  s,  ds d 27,223"), is("875"));
     }
 }
