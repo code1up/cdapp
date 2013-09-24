@@ -1,0 +1,47 @@
+./build.sh: line 1: //: is a directory
+com/develogical/web/ApiResponse.java:3: cannot find symbol
+symbol  : class QueryProcessor
+location: package com.develogical
+import com.develogical.QueryProcessor;
+                      ^
+com/develogical/web/ResultsPage.java:3: cannot find symbol
+symbol  : class QueryProcessor
+location: package com.develogical
+import com.develogical.QueryProcessor;
+                      ^
+com/develogical/web/ApiResponse.java:20: cannot find symbol
+symbol  : class QueryProcessor
+location: class com.develogical.web.ApiResponse
+        writer.println(new QueryProcessor().process(query));
+                           ^
+com/develogical/web/ResultsPage.java:17: cannot find symbol
+symbol  : class QueryProcessor
+location: class com.develogical.web.ResultsPage
+        String result = new QueryProcessor().process(query);
+                            ^
+4 errors
+com/develogical/WebServer.java:3: package com.develogical.web does not exist
+import com.develogical.web.ApiResponse;
+                          ^
+com/develogical/WebServer.java:4: package com.develogical.web does not exist
+import com.develogical.web.IndexPage;
+                          ^
+com/develogical/WebServer.java:5: package com.develogical.web does not exist
+import com.develogical.web.ResultsPage;
+                          ^
+com/develogical/WebServer.java:22: cannot find symbol
+symbol  : class IndexPage
+location: class com.develogical.WebServer.Website
+                new IndexPage().writeTo(resp);
+                    ^
+com/develogical/WebServer.java:24: cannot find symbol
+symbol  : class ResultsPage
+location: class com.develogical.WebServer.Website
+                new ResultsPage(req.getParameter("q")).writeTo(resp);
+                    ^
+com/develogical/WebServer.java:32: cannot find symbol
+symbol  : class ApiResponse
+location: class com.develogical.WebServer.Api
+            new ApiResponse(req.getParameter("q")).writeTo(resp);
+                ^
+6 errors
