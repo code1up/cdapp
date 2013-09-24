@@ -24,7 +24,7 @@ public class QueryProcessor {
 	    		}
 	    	}
 
-	    	return Integer.toString(largest);
+	    	return 42; // Integer.toString(largest);
     	}
 
     	if (query.contains("what is")) {
