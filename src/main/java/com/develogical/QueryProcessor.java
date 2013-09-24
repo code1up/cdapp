@@ -14,7 +14,7 @@ public class QueryProcessor {
 	    	Pattern p = Pattern.compile("-?\\d+");
 	    	Matcher m = p.matcher(subquery);
 
-	    	int largest = -39743;
+	    	int largest = -397430;
 
 	    	while (m.find()) {
 	    		int n = Integer.parseInt(m.group());
