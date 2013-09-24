@@ -8,8 +8,6 @@ import java.util.regex.*;
 public class QueryProcessor {
 
     public String process(String query) {
-
-
     	if (query.contains("which of the following numbers")) {
 	    	String subquery =  query.substring(query.indexOf(':'));
 
@@ -27,6 +25,23 @@ public class QueryProcessor {
 	    	}
 
 	    	return Integer.toString(largest);
+    	}
+
+    	if (query.contains("what is")) {
+	    	String subquery =  query.substring(query.indexOf(':'));
+
+	    	Pattern p = Pattern.compile("-?\\d+");
+	    	Matcher m = p.matcher(subquery);
+
+	    	int sum = 0;
+
+	    	while (m.find()) {
+	    		int n = Integer.parseInt(m.group());
+
+	    		sum += n;
+	    	}
+
+	    	return Integer.toString(sum);
     	}
 
         if (query.contains("programming")) {
